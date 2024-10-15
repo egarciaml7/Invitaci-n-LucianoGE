@@ -192,20 +192,17 @@
             <a href="https://api.whatsapp.com/send/?phone=5215536773592&text=Hola,+lamentablemente+no+podré+asistir+al+cumpleaños+de+Luciano.+Gracias+por+la+invitación.%0A%0A" class="button-cancelar">Cancelar Asistencia</a>
         </div>
 
-              <!-- Botón para activar el sonido en icono, debajo de los botones -->
+                         <!-- Botón para activar el sonido en icono, debajo de los botones -->
         <button id="toggle-music" class="music-control">
             <i id="sound-icon" class="fas fa-volume-up"></i> <!-- Icono de volumen activado -->
         </button>
     </div>
 
     <script>
-        // Quitar el loop de la música (ya no será necesario en el HTML)
+        // Controlar la música con JavaScript
         const music = document.getElementById('background-music');
-        
-        // Detectar cuando termina la música y asegurarse de que no se vuelva a reproducir
-        music.addEventListener('ended', function() {
-            music.currentTime = 0; // Reiniciar a 0 si es necesario
-        }, false);
+        const toggleMusicButton = document.getElementById('toggle-music');
+        const soundIcon = document.getElementById('sound-icon');
 
         // Cambiar entre silenciar y activar sonido
         toggleMusicButton.addEventListener('click', () => {
